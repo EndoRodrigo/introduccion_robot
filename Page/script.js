@@ -68,3 +68,13 @@ document.getElementById("formulario").addEventListener("submit", function (event
 
     // El formulario es válido, se puede enviar
 });
+
+
+function redirigir(event) {
+    event.preventDefault();
+    
+    // Procesar los datos del formulario aquí
+    
+    // Redireccionar a otra página
+    window.location.href = "exito.html"; // Cambia "nueva-pagina.html" por la URL de la página a la que deseas redirigir
+  }
