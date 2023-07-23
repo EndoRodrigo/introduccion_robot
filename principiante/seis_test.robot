@@ -1,5 +1,5 @@
 *** Settings ***
-Documentation    Prueba de automatizacion completa de un login
+Documentation    Proyecto de pruebas numero uno de automatizacionnnivel intermedio
 Library    SeleniumLibrary
 
 *** Variables ***
