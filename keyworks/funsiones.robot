@@ -27,7 +27,8 @@ f_buton
     Wait Until Element Is Visible    ${self}
     Wait Until Element Is Enabled    ${self}
     Element Should Be Visible    ${self}
-    Execute Javascript    window.scroll(0,20)
+    Scroll Element Into View    ${self}
+    Execute Javascript    window.scroll(0,500)
     Click Button    ${self}
 
 f_foto_pagina
