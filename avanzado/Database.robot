@@ -12,6 +12,7 @@ Suite Teardown    Disconnect From Database
 ${url}    https://demoqa.com/menu/
 ${navegador}    chrome
 ${images}    "C:\\Users\\endor\\OneDrive\\Documentos\\introduccion_robot\\img"
+${rutascript}    C:/Users/endor/OneDrive/Documentos/introduccion_robot/keyworks/InsertQuery.sql
 ${dbname}    robot
 ${dbuser}    endo
 ${dbpass}    12345
@@ -21,7 +22,22 @@ ${dbport}    3306
 *** Test Cases ***
 Crear una tabla de base de datos
     [Documentation]    Crear una buena tabla en DB
-    [Tags]    test_crear_tabla
+    [Tags]    test_crear_table
     ${crear}    Execute Sql String    CREATE TABLE Customer (id int(11) NOT NULL, name varchar(40), ap varchar(40))
     Log To Console    ${crear}
     Should Be Equal As Strings    ${crear}    None
+
+Realizando un insert sobre una tabla
+    [Documentation]    Insertando registros en tablas
+    [Tags]    test_insert_table
+    ${insertar}    Execute Sql String    INSERT INTO customer VALUES (1,'Endo Rodrigo','Rodriguez Ariza')
+    Log To Console    ${insertar}
+    Should Be Equal As Strings    ${insertar}    None
+
+Realizando un insert de registros sobre unscript
+    [Documentation]    Insertando registros en tablas con archivos .sql
+    [Tags]    test_insert_table_script
+    ${insertarFile}    Execute Sql Script    ${rutascript}
+    Log To Console    ${insertarFile}
+    Should Be Equal As Strings    ${insertarFile}    None
+    
