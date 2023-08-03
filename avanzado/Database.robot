@@ -46,4 +46,8 @@ Verificar si un registro existe en DB
     [Tags]    test_consilt
     Check If Exists In Database    SELECT name FROM customer WHERE name='Andrea'
     
+Verificar si un registro no existe en DB
+    [Documentation]    Verificar un registro
+    [Tags]    test_consilt_dos
+    Check If Not Exists In Database    SELECT name FROM customer WHERE name='GOKU'
     
