@@ -40,4 +40,10 @@ Realizando un insert de registros sobre unscript
     ${insertarFile}    Execute Sql Script    ${rutascript}
     Log To Console    ${insertarFile}
     Should Be Equal As Strings    ${insertarFile}    None
+
+Verificar si un registro existe en DB
+    [Documentation]    Verificar un registro
+    [Tags]    test_consilt
+    Check If Exists In Database    SELECT name FROM customer WHERE name='Andrea'
+    
     
