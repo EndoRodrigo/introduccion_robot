@@ -51,3 +51,8 @@ Verificar si un registro no existe en DB
     [Tags]    test_consilt_dos
     Check If Not Exists In Database    SELECT name FROM customer WHERE name='GOKU'
     
+Verificar que na tbla exista en DB
+    [Documentation]    Buscar una tabla
+    [Tags]    test_exist_table
+    ${existe}    Table Must Exist    customer
+    Log To Console    ${existe}
