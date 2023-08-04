@@ -1,5 +1,3 @@
-# introduccion_robot
-
 # Proyecto RobotFramework
 
 ![RobotFramework Logo](robotframework_logo.png)
