@@ -56,3 +56,10 @@ Verificar que na tbla exista en DB
     [Tags]    test_exist_table
     ${existe}    Table Must Exist    customer
     Log To Console    ${existe}
+
+Verificar varios elementos de una ttabla
+    [Documentation]    buscar varios elementos en una tabla
+    [Tags]    test_varios_resultados
+    Row Count Is Equal To X    select customer where name='Endo Rodrigo'    2
+    
+    
