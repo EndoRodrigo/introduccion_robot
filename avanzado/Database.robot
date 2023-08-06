@@ -56,3 +56,10 @@ Verificar que na tbla exista en DB
     [Tags]    test_exist_table
     ${existe}    Table Must Exist    customer
     Log To Console    ${existe}
+
+Actualizar un registro en DB
+    [Documentation]    Actualizar informacion
+    [Tags]    test_update
+    ${actualizar}    Execute Sql String    update customer set name = 'Andrian' where name = 'Endo Rodrigo'
+    Log To Console    ${actualizar}
+    Should Be Equal As Strings    ${actualizar}     None
