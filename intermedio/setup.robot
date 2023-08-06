@@ -2,7 +2,6 @@
 Documentation    Automatizacion de pruebas con captura de pantallas
 Library       SeleniumLibrary
 Resource    ../keyworks/key_ejercicio_dos.robot
-Resource    ../keyworks/key_ejercicio_dos.robot
 Suite Setup    Abrir el navegado de chrome
 Suite Teardown    Cerrar el navegador
 
