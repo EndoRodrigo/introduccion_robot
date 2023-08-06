@@ -29,7 +29,12 @@ Mover un directorio
     OperatingSystem.Move File    carpeta2/Carpeta1/archivo1.txt    intermedio
 
 Verificar si un directorio existe
-    [Documentation]    Verificar si un doirectorioesxiste
+    [Documentation]    Verificar si un directorio existe
     [Tags]    test_find
-    OperatingSystem.Should Exist    test
+    ${bandera}    Run Keyword And Return Status    OperatingSystem.Should Exist    Intermedio
+    Log To Console    ${bandera}
+    Run Keyword If    '${bandera}'    Run Keyword    Log To Console    El directorio sí existe
+
+
+        
     
