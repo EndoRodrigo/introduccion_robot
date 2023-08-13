@@ -16,7 +16,7 @@ Capturando pantalla de pruebas
     f_txt    id=Password        12345
     f_buton    xpath=//button[@class="button-1 login-button"]
 
-Capturando pantalla de pruebas
+Capturando pantalla de pruebas dos
     f_txt    id=Email        endo@gmai
     f_txt    id=Password        12345
     f_buton    xpath=//button[@class="button-1 login-button"]

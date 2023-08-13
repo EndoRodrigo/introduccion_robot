@@ -1,0 +1,140 @@
+{
+    "PosLog": {
+        "Transaction": {
+            "RetailStoreID": 2301,
+            "WorkstationID": 4,
+            "SequenceNumber": 1113,
+            "BeginDateTime": "2023-08-08T10:44:21",
+            "EndDateTime": "2023-08-08T10:44:46",
+            "Operator": {
+                "EmployeeID": 1116666729,
+                "OperatorID": 17
+            },
+            "CurrencyCode": "COP",
+            "ActionCode": 0,
+            "RetailTransaction": {
+                "Version": 2.2,
+                "ItemCount": 1,
+                "LineItem": [
+                    {
+                        "EntryMethod": "Keyed",
+                        "SequenceNumber": 1,
+                        "BeginDateTime": "2023-08-08T10:44:21",
+                        "EndDateTime": "2023-08-08T10:44:21",
+                        "Sale": {
+                            "ItemType": "Stock",
+                            "POSIdentity": {
+                                "POSItemID": "00000000000031"
+                            },
+                            "ItemID": {
+                                "Type": "SKU",
+                                "#text": "00000002558"
+                            },
+                            "MerchandiseHierarchy": [
+                                {
+                                    "Level": "Department",
+                                    "#text": "22"
+                                }
+                            ],
+                            "Description": "AGUACATE INJERTO",
+                            "TaxIncludedInPriceFlag": true,
+                            "RegularSalesUnitPrice": "5590.00",
+                            "ActualSalesUnitPrice": "5590.00",
+                            "ExtendedAmount": "5590.00",
+                            "Quantity": "1.000",
+                            "UnitOfMeasureCode": "Kg",
+                            "Tax": [
+                                {
+                                    "TaxType": "IVA",
+                                    "TaxSubType": "Exempt",
+                                    "TaxGroupID": 0
+                                }
+                            ]
+                        },
+                        "MarketingCode": "00020002000100020000"
+                    },
+                    {
+                        "SequenceNumber": 2,
+                        "BeginDateTime": "2023-08-08T10:44:45",
+                        "Tender": {
+                            "TenderType": "TarjetaRegalo",
+                            "TypeCode": "Sale",
+                            "TenderID": 34,
+                            "Amount": "5590.00"
+                        }
+                    },
+                    {
+                        "SequenceNumber": 3,
+                        "Tax": [
+                            {
+                                "TaxType": "IVA",
+                                "Amount": "0.00",
+                                "BaseAmount": "5590.00",
+                                "Percent": "0.0",
+                                "TaxGroupID": 0
+                            }
+                        ]
+                    },
+                    {
+                        "SequenceNumber": 4,
+                        "Tax": [
+                            {
+                                "TaxType": "IVA",
+                                "Amount": "0.00",
+                                "BaseAmount": "5590.00",
+                                "Percent": "0.0",
+                                "TaxGroupID": 0
+                            }
+                        ],
+                        "POSIdentity": {
+                            "POSItemID": "00000000000031"
+                        },
+                        "SequenceLineItem": [
+                            1
+                        ]
+                    }
+                ],
+                "Total": [
+                    {
+                        "TotalType": "TransactionGrossAmount",
+                        "Amount": "5590.00"
+                    },
+                    {
+                        "TotalType": "TransactionNetAmount",
+                        "Amount": "5590.00"
+                    },
+                    {
+                        "TotalType": "TransactionBaseAmount",
+                        "Amount": "5590.00"
+                    }
+                ],
+                "ElapsedTime": [
+                    {
+                        "Type": "Ring",
+                        "Value": 2
+                    },
+                    {
+                        "Type": "Tender",
+                        "Value": 22
+                    }
+                ],
+                "FiscalInformation": {
+                    "FiscalCode": "1",
+                    "FiscalReceiptNumber": "129",
+                    "FiscalResetNumber": 1,
+                    "FiscalPosNumber": "0000",
+                    "FixedAsset": false,
+                    "FiscalSheetCount": 1,
+                    "Prefix": "1N02",
+                    "Serial": "DTM67",
+                    "InitialResolution": 1,
+                    "FinalResolution": 4999999,
+                    "ResolutionNumber": "12345678901234",
+                    "ResolutionBeginDate": "1 Enero 2021",
+                    "ResolutionEndDate": "1 Enero 2023"
+                },
+                "BillerOrderID": "POS"
+            }
+        }
+    }
+}
