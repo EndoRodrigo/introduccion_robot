@@ -2,7 +2,7 @@
 Library     ExcelLibrary
 
 *** Variables ***
-${ExcelFile}    C:/Users/endor/OneDrive/Documentos/introduccion_robot/Cuadratura/output.xlsx
+${ExcelFile}    C:/Users/laa0304/Documents/Experimentos/introduccion_robot/Cuadratura/output.xlsx
 
 *** Test Cases ***
 Trabajando con archivos de excel 
@@ -20,5 +20,8 @@ Obtener el numero de las hojas del excel
     Log To Console    	${sheets}
 
 Escribir en un archivo de excel
-    Write Excel Cell    1    1    ENDO
-    write
+    Open Excel Document	filename=${ExcelFile}	doc_id=docid
+    #Open Excel Document    C:/Users/endor/OneDrive/Documentos/introduccion_robot/Cuadratura/output.xlsx
+    Write Excel Cell    1    1    ENDO    Hoja1
+    Save Excel Document    filename=${ExcelFile}
+    

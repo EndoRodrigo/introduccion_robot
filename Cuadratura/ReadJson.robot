@@ -2,17 +2,19 @@
 Library     Collections
 Library     OperatingSystem
 Library     ExcelLibrary
+Library     requests
 
 *** Variables ***
-${JSON_File}     C:/Users/endor/OneDrive/Documentos/introduccion_robot/Cuadratura/Poslog.json
-${ExcelFile}    C:/Users/endor/OneDrive/Documentos/introduccion_robot/Cuadratura/output.xlsx
+${JSON_File}     C:/Users/laa0304/Documents/Experimentos/introduccion_robot/Cuadratura/Poslog.json
+${ExcelFile}    C:/Users/laa0304/Documents/Experimentos/introduccion_robot/Cuadratura/output.xlsx
 
 *** Test Cases ***
 Procesar JSON y Crear Excel
-    ${json_data}    Leer Archivo    ${JSON_File}
-    ${data_dict}    Evaluate    json.loads('''${json_data}''')    json
-    ${tax_info}    Set Variable    ${data_dict['Tax'][0]}
-    Crear Excel y Añadir Datos
+    ${json_}    Leer Archivo    ${JSON_File}
+    ${_dict}    Evaluate    json.loads('''${json_}''')    json
+    ${tax_info}    Set Variable    ${_dict['Tax'][0]}
+    Log To Console    ${tax_info['TaxType']}
+    Crear Excel y Añadir Datos    ${tax_info}
     Guardar Excel
 
 *** Keywords ***
@@ -23,18 +25,18 @@ Leer Archivo
     [Return]    ${content}
 
 Crear Excel y Añadir Datos
-    Create Excel Document    ${ExcelFile}
-    
-    Write Excel Cell    Data    1    1    TaxType
-    Write Excel Cell    Data    1    2    Amount
-    Write Excel Cell    Data    1    3    BaseAmount
-    Write Excel Cell    Data    1    4    Percent
-    Write Excel Cell    Data    1    5    TaxGroupID
-    Write Excel Cell    Data    2    1    ${tax_info['TaxType']}
-    Write Excel Cell    Data    2    2    ${tax_info['Amount']}
-    Write Excel Cell    Data    2    3    ${tax_info['BaseAmount']}
-    Write Excel Cell    Data    2    4    ${tax_info['Percent']}
-    Write Excel Cell    Data    2    5    ${tax_info['TaxGroupID']}
+    [Arguments]    ${tax_info}
+    Open Excel Document	filename=${ExcelFile}	doc_id=docid
+    Write Excel Cell    1    1    TaxType    Hoja1
+    Write Excel Cell    1    2    Amount    Hoja1
+    Write Excel Cell    1    3    BaseAmount    Hoja1
+    Write Excel Cell    1    4    Percent    Hoja1
+    Write Excel Cell    1    5    TaxGroupID    Hoja1
+    Write Excel Cell    2    1    ${tax_info['TaxType']}    Hoja1
+    Write Excel Cell    2    2    ${tax_info['Amount']}    Hoja1
+    Write Excel Cell    2    3    ${tax_info['BaseAmount']}    Hoja1
+    Write Excel Cell    2    4    ${tax_info['Percent']}    Hoja1
+    Write Excel Cell    2    5    ${tax_info['TaxGroupID']}    Hoja1
 
 Guardar Excel
     Save Excel Document    ${ExcelFile}
